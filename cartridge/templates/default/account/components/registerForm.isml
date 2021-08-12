@@ -35,23 +35,7 @@
         <div class="invalid-feedback" id="form-lname-error"></div>
     </div>
 
-    <div class="form-group
-        <isif condition="${!!pdict.profileForm.customer.phone.mandatory === true}">required</isif>">
-        <label class="form-control-label" for="registration-form-phone">
-            <isprint value="${pdict.profileForm.customer.phone.label}" encoding="htmlcontent" />
-        </label>
-        <input
-            type="tel"
-            class="form-control"
-            id="registration-form-phone"
-            data-missing-error="${Resource.msg('error.message.required','forms',null)}"
-            data-pattern-mismatch="${Resource.msg('error.message.parse.phone.profile.form','forms',null)}"
-            data-range-error="${Resource.msg('error.message.50orless','forms',null)}"
-            aria-describedby="form-phone-error"
-            <isprint value=${pdict.profileForm.customer.phone.attributes} encoding="off" />
-            placeholder="${Resource.msg('example.phone','forms',null)}">
-        <div class="invalid-feedback" id="form-phone-error"></div>
-    </div>
+    
 
     <div class="form-group
         <isif condition="${!!pdict.profileForm.customer.email.mandatory === true}">required</isif>">
@@ -121,6 +105,138 @@
         <div class="invalid-feedback" id="form-password-confirm-error"></div>
     </div>
 
+
+     <div class="form-group
+        <isif condition="${!!pdict.profileForm.customer.cpf.mandatory === true}">required</isif>">
+        <label class="form-control-label" for="registration-form-CPFNandara">
+            CPF
+        </label>
+        <input
+            type="text"
+            class="form-control"
+            id="registration-form-cpf"
+            data-missing-error="${Resource.msg('error.message.required','forms',null)}"
+            data-range-error="${Resource.msg('error.message.50orless','forms',null)}"
+            aria-describedby="form-cpf-error"
+            <isprint value=${pdict.profileForm.customer.cpf.attributes} encoding="off" />>
+        <div class="invalid-feedback" id="form-cpf-error"></div>
+    </div>
+
+    <div class="form-group
+        <isif condition="${!!pdict.profileForm.customer.birthday.mandatory === true}">required</isif>">
+        <label class="form-control-label" for="registration-form-birthday">
+            Birthday
+        </label>
+        <input
+            type="text"
+            class="form-control"
+            id="registration-form-birthday"
+            data-missing-error="${Resource.msg('error.message.required','forms',null)}"
+            data-range-error="${Resource.msg('error.message.50orless','forms',null)}"
+            aria-describedby="form-birthday-error"
+            <isprint value=${pdict.profileForm.customer.birthday.attributes} encoding="off" />>
+        <div class="invalid-feedback" id="form-birthday-error"></div>
+    </div>
+
+    <div class="form-group
+        <isif condition="${!!pdict.profileForm.customer.gender.mandatory === true}">required</isif>">
+        <label class="form-control-label" for="registration-form-gender">
+            Gender
+        </label>
+        <input
+            type="text"
+            class="form-control"
+            id="registration-form-gender"
+            data-missing-error="${Resource.msg('error.message.required','forms',null)}"
+            data-range-error="${Resource.msg('error.message.50orless','forms',null)}"
+            aria-describedby="form-gender-error"
+            <isprint value=${pdict.profileForm.customer.gender.attributes} encoding="off" />>
+        <div class="invalid-feedback" id="form-gender-error"></div>
+    </div>
+
+
+    <div class="form-group
+        <isif condition="${!!pdict.profileForm.customer.phone.mandatory === true}">required</isif>">
+        <label class="form-control-label" for="registration-form-phone">
+            <isprint value="${pdict.profileForm.customer.phone.label}" encoding="htmlcontent" />
+        </label>
+        <input
+            type="tel"
+            class="form-control"
+            id="registration-form-phone"
+            data-missing-error="${Resource.msg('error.message.required','forms',null)}"
+            data-pattern-mismatch="${Resource.msg('error.message.parse.phone.profile.form','forms',null)}"
+            data-range-error="${Resource.msg('error.message.50orless','forms',null)}"
+            aria-describedby="form-phone-error"
+            <isprint value=${pdict.profileForm.customer.phone.attributes} encoding="off" />
+            placeholder="${Resource.msg('example.phone','forms',null)}">
+        <div class="invalid-feedback" id="form-phone-error"></div>
+    </div>
+
+    <div class="form-group
+        <isif condition="${!!pdict.profileForm.customer.cep.mandatory === true}">required</isif>">
+        <label class="form-control-label" for="registration-form-cep">
+            CEP
+        </label>
+        <input
+            type="text"
+            class="form-control"
+            id="registration-form-cep"
+            data-missing-error="${Resource.msg('error.message.required','forms',null)}"
+            data-range-error="${Resource.msg('error.message.50orless','forms',null)}"
+            aria-describedby="form-cep-error"
+            <isprint value=${pdict.profileForm.customer.cep.attributes} encoding="off" />>
+        <div class="invalid-feedback" id="form-cep-error"></div>
+    </div>
+
+    <div class="form-group
+        <isif condition="${!!pdict.profileForm.customer.state.mandatory === true}">required</isif>">
+        <label class="form-control-label" for="registration-form-state">
+            State
+        </label>
+        <input
+            type="text"
+            class="form-control"
+            id="registration-form-state"
+            data-missing-error="${Resource.msg('error.message.required','forms',null)}"
+            data-range-error="${Resource.msg('error.message.50orless','forms',null)}"
+            aria-describedby="form-state-error"
+            <isprint value=${pdict.profileForm.customer.state.attributes} encoding="off" />>
+        <div class="invalid-feedback" id="form-state-error"></div>
+    </div>
+
+    <div class="form-group
+        <isif condition="${!!pdict.profileForm.customer.city.mandatory === true}">required</isif>">
+        <label class="form-control-label" for="registration-form-city">
+            City
+        </label>
+        <input
+            type="text"
+            class="form-control"
+            id="registration-form-city"
+            data-missing-error="${Resource.msg('error.message.required','forms',null)}"
+            data-range-error="${Resource.msg('error.message.50orless','forms',null)}"
+            aria-describedby="form-city-error"
+            <isprint value=${pdict.profileForm.customer.city.attributes} encoding="off" />>
+        <div class="invalid-feedback" id="form-city-error"></div>
+    </div>
+
+    <div class="form-group
+        <isif condition="${!!pdict.profileForm.customer.street.mandatory === true}">required</isif>">
+        <label class="form-control-label" for="registration-form-city">
+            Street
+        </label>
+        <input
+            type="text"
+            class="form-control"
+            id="registration-form-streer"
+            data-missing-error="${Resource.msg('error.message.required','forms',null)}"
+            data-range-error="${Resource.msg('error.message.50orless','forms',null)}"
+            aria-describedby="form-street-error"
+            <isprint value=${pdict.profileForm.customer.street.attributes} encoding="off" />>
+        <div class="invalid-feedback" id="form-street-error"></div>
+    </div>
+
     <div class="form-group custom-control custom-checkbox">
         <input
             type="checkbox"
@@ -131,6 +247,7 @@
             <isprint value="${pdict.profileForm.customer.addtoemaillist.label}" encoding="htmlcontent" />
         </label>
     </div>
+
 
     <input type="hidden" name="${pdict.csrf.tokenName}" value="${pdict.csrf.token}"/>
 
