@@ -15,6 +15,10 @@
             <dd>${pdict.account.profile.lastName}</dd>
         </dl>
         <dl>
+            <dt>${Resource.msg('label.profile.cpf','account',null)}</dt>
+            <dd>${pdict.account.profile.cpf}</dd>
+        </dl>
+        <dl>
             <dt>${Resource.msg('label.profile.email','account',null)}</dt>
             <dd>${pdict.account.profile.email}</dd>
         </dl>

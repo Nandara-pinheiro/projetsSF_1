@@ -216,6 +216,7 @@ server.post(
         var registrationFormObj = {
             firstName: registrationForm.customer.firstname.value,
             lastName: registrationForm.customer.lastname.value,
+            cpf: registrationForm.customer.cpf.value,
             phone: registrationForm.customer.phone.value,
             email: registrationForm.customer.email.value,
             emailConfirm: registrationForm.customer.emailconfirm.value,
@@ -264,6 +265,7 @@ server.post(
 
                                 newCustomerProfile.firstName = registrationForm.firstName;
                                 newCustomerProfile.lastName = registrationForm.lastName;
+                                newCustomerProfile.custom.cpf = registrationForm.cpf;
                                 newCustomerProfile.phoneHome = registrationForm.phone;
                                 newCustomerProfile.email = registrationForm.email;
                             }
@@ -351,6 +353,7 @@ server.get(
         profileForm.clear();
         profileForm.customer.firstname.value = accountModel.profile.firstName;
         profileForm.customer.lastname.value = accountModel.profile.lastName;
+        profileForm.customer.cpf.value = accountModel.profile.cpf;
         profileForm.customer.phone.value = accountModel.profile.phone;
         profileForm.customer.email.value = accountModel.profile.email;
         res.render('account/profile', {
@@ -416,6 +419,7 @@ server.post(
         var result = {
             firstName: profileForm.customer.firstname.value,
             lastName: profileForm.customer.lastname.value,
+            cpf: profileForm.customer.cpf.value,
             phone: profileForm.customer.phone.value,
             email: profileForm.customer.email.value,
             confirmEmail: profileForm.customer.emailconfirm.value,
@@ -459,6 +463,7 @@ server.post(
                     Transaction.wrap(function () {
                         profile.setFirstName(formInfo.firstName);
                         profile.setLastName(formInfo.lastName);
+                        profile.setCpf(formInfo.cpf);
                         profile.setEmail(formInfo.email);
                         profile.setPhoneHome(formInfo.phone);
                     });
@@ -815,6 +820,7 @@ server.post('SaveNewPassword', server.middleware.https, function (req, res, next
                 var objectForEmail = {
                     firstName: resettingCustomer.profile.firstName,
                     lastName: resettingCustomer.profile.lastName,
+                    cpf: resettingCustomer.profile.cpf,
                     url: url
                 };
 
