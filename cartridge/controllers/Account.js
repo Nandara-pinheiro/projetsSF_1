@@ -265,7 +265,8 @@ server.post(
 
                                 newCustomerProfile.firstName = registrationForm.firstName;
                                 newCustomerProfile.lastName = registrationForm.lastName;
-                                newCustomerProfile.custom.cpf = registrationForm.cpf;
+                                newCustomerProfile.custom.CPFNandara = registrationForm.cpf; 
+                                // todos os atributos personalizados tem que receber o custom e id
                                 newCustomerProfile.phoneHome = registrationForm.phone;
                                 newCustomerProfile.email = registrationForm.email;
                             }

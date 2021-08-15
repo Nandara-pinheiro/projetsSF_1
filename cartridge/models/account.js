@@ -11,12 +11,25 @@ var Customer = require('dw/customer/Customer');
  */
 function getProfile(profile) {
     var result;
+
+    var CustomerMgr= require('dw/customer/CustomerMgr');
+    var profileCustom= CustomerMgr.getCustomerByLogin(profile.email);
+
+    if (profileCustom != null){
+         profileCustom = profileCustom.getProfile();
+    
+    }
+
     if (profile) {
         result = {
+
             firstName: profile.firstName,
             lastName: profile.lastName,
-            cpf: profile.cpf,
             email: profile.email,
+            cpf: profileCustom.custom.CPFNandara,
+            //state: profileCustom.state,
+            //city: profileCustom.city,
+            //street: profileCustom.street,
             phone: Object.prototype.hasOwnProperty.call(profile, 'phone') ? profile.phone : profile.phoneHome,
             password: '********'
         };
@@ -25,6 +38,7 @@ function getProfile(profile) {
     }
     return result;
 }
+
 
 /**
  * Creates an array of plain object that contains address book addresses, if any exist
