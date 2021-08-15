@@ -178,7 +178,8 @@
             data-range-error="${Resource.msg('error.message.50orless','forms',null)}"
             aria-describedby="form-phone-error"
             <isprint value=${pdict.profileForm.customer.phone.attributes} encoding="off" />
-            placeholder="${Resource.msg('example.phone','forms',null)}">
+            <!-- placeholder= "${Resource.msg('example.phone','forms',null)}"> -->
+            placeholder= "exemple xx xxxxx - xxxxx">
         <div class="invalid-feedback" id="form-phone-error"></div>
     </div>
 
