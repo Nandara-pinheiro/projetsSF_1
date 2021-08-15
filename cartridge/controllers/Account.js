@@ -216,12 +216,18 @@ server.post(
         var registrationFormObj = {
             firstName: registrationForm.customer.firstname.value,
             lastName: registrationForm.customer.lastname.value,
-            cpf: registrationForm.customer.cpf.value,
-            phone: registrationForm.customer.phone.value,
             email: registrationForm.customer.email.value,
             emailConfirm: registrationForm.customer.emailconfirm.value,
             password: registrationForm.login.password.value,
             passwordConfirm: registrationForm.login.passwordconfirm.value,
+            cpf: registrationForm.customer.cpf.value,
+            birthday: registrationForm.customer.birthday.value,
+            gender: registrationForm.customer.gender.value,
+            phone: registrationForm.customer.phone.value,
+            cep: registrationForm.customer.cep.value,
+            state: registrationForm.customer.state.value,
+            city: registrationForm.customer.city.value,
+            street: registrationForm.customer.street.value,
             validForm: registrationForm.valid,
             form: registrationForm
         };
@@ -265,10 +271,17 @@ server.post(
 
                                 newCustomerProfile.firstName = registrationForm.firstName;
                                 newCustomerProfile.lastName = registrationForm.lastName;
-                                newCustomerProfile.custom.CPFNandara = registrationForm.cpf; 
-                                // todos os atributos personalizados tem que receber o custom e id
-                                newCustomerProfile.phoneHome = registrationForm.phone;
                                 newCustomerProfile.email = registrationForm.email;
+                                newCustomerProfile.custom.CPFNandara = registrationForm.cpf; 
+                                newCustomerProfile.birthday = registrationForm.birthday;
+                                newCustomerProfile.gender = registrationForm.gender;
+                                newCustomerProfile.phoneHome = registrationForm.phone;
+                                newCustomerProfile.custom.CEPNandara = registrationForm.cep;
+                                newCustomerProfile.custom.StateNandara = registrationForm.state;
+                                newCustomerProfile.custom.CityNandara = registrationForm.city;
+                                newCustomerProfile.custom.StateNandara = registrationForm.street;
+
+                            
                             }
                         });
                     } catch (e) {
