@@ -26,12 +26,16 @@ function getProfile(profile) {
             firstName: profile.firstName,
             lastName: profile.lastName,
             email: profile.email,
-            cpf: profileCustom.custom.CPFNandara,
-            //state: profileCustom.state,
-            //city: profileCustom.city,
-            //street: profileCustom.street,
-            phone: Object.prototype.hasOwnProperty.call(profile, 'phone') ? profile.phone : profile.phoneHome,
             password: '********'
+            cpf: profileCustom.custom.CPFNandara,
+            birthday: profile.birthday,
+            gender: profile.gender,
+            phone: Object.prototype.hasOwnProperty.call(profile, 'phone') ? profile.phone : profile.phoneHome,
+            cep: profileCustom.custom.CEPNandara,
+            state: profileCustom.custom.StateNandara,
+            city: profileCustom.custom.CityNandara,
+            street: profileCustom.custom.StreetNandara,
+        
         };
     } else {
         result = null;
