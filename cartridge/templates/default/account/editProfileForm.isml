@@ -64,7 +64,7 @@
      <div class="form-group
         <isif condition="${pdict.profileForm.customer.birthday.mandatory === true}">required</isif>">
         <label class="form-control-label" for="birthday">
-            Birthday
+            <isprint value="${pdict.profileForm.birthday.label}" encoding="htmlcontent" />
         </label>
         <input type="text" class="form-control" id="birthday"
             <isprint value="${pdict.profileForm.customer.birthday.attributes}" encoding="off" />>
@@ -74,7 +74,7 @@
     <div class="form-group
         <isif condition="${pdict.profileForm.customer.gender.mandatory === true}">required</isif>">
         <label class="form-control-label" for="gender">
-            Gender
+            <isprint value="${pdict.profileForm.gender.label}" encoding="htmlcontent" />
         </label>
         <input type="text" class="form-control" id="gender"
             <isprint value="${pdict.profileForm.customer.gender.attributes}" encoding="off" />>
@@ -94,7 +94,7 @@
     <div class="form-group
         <isif condition="${pdict.profileForm.customer.cep.mandatory === true}">required</isif>">
         <label class="form-control-label" for="cep">
-            CEP
+            <isprint value="${pdict.profileForm.cep.label}" encoding="htmlcontent" />
         </label>
         <input type="text" class="form-control" id="cep"
             <isprint value="${pdict.profileForm.customer.cep.attributes}" encoding="off" />>
@@ -104,7 +104,7 @@
     <div class="form-group
         <isif condition="${pdict.profileForm.customer.state.mandatory === true}">required</isif>">
         <label class="form-control-label" for="state">
-            State
+            <isprint value="${pdict.profileForm.state.label}" encoding="htmlcontent" />
         </label>
         <input type="text" class="form-control" id="state"
             <isprint value="${pdict.profileForm.customer.state.attributes}" encoding="off" />>
@@ -114,7 +114,7 @@
     <div class="form-group
         <isif condition="${pdict.profileForm.customer.city.mandatory === true}">required</isif>">
         <label class="form-control-label" for="city">
-            City
+            <isprint value="${pdict.profileForm.city.label}" encoding="htmlcontent" />
         </label>
         <input type="text" class="form-control" id="city"
             <isprint value="${pdict.profileForm.customer.city.attributes}" encoding="off" />>
@@ -124,7 +124,7 @@
     <div class="form-group
         <isif condition="${pdict.profileForm.customer.street.mandatory === true}">required</isif>">
         <label class="form-control-label" for="street">
-            Street
+            <isprint value="${pdict.profileForm.street.label}" encoding="htmlcontent" />
         </label>
         <input type="text" class="form-control" id="street"
             <isprint value="${pdict.profileForm.customer.street.attributes}" encoding="off" />>
