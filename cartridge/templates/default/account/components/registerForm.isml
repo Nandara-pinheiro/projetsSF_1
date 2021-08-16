@@ -115,13 +115,11 @@
             type="text"
             class="form-control"
             id="registration-form-"
-            pattern= "^\d{3}-\d{3}-\d{3}.\d{2}$"
+            pattern= "^\d{3}.\d{3}.\d{3}-\d{2}$"
             data-missing-error="${Resource.msg('error.message.required','forms',null)}"
             data-range-error="${Resource.msg('error.message.50orless','forms',null)}"
             aria-describedby="form-cpf-error"
-            placeholder= "${Resource.msg('example.phone','forms',null)}">
-            <isprint value=${pdict.profileForm.customer.cpf.attributes} encoding="off" />
-            placeholder= "${Resource.msg('example.cpf','forms',null)}">
+            <isprint value=${pdict.profileForm.customer.cpf.attributes} encoding="off" />>
         <div class="invalid-feedback" id="form-cpf-error"></div>
     </div>
 
@@ -137,8 +135,7 @@
             data-missing-error="${Resource.msg('error.message.required','forms',null)}"
             data-range-error="${Resource.msg('error.message.50orless','forms',null)}"
             aria-describedby="form-birthday-error"
-            <isprint value=${pdict.profileForm.customer.birthday.attributes} encoding="off" />
-            placeholder= "${Resource.msg('example.birthday','forms',null)}">
+            <isprint value=${pdict.profileForm.customer.birthday.attributes} encoding="off" />>
         <div class="invalid-feedback" id="form-birthday-error"></div>
     </div>
 
@@ -175,7 +172,7 @@
             type="tel"
             class="form-control"
             id="registration-form-phone"
-            pattern= "^\d{2}-\d{4,5}-\d{4}$"
+            pattern= "^\d{3} \d{4,5}-\d{4}$"
             data-missing-error="${Resource.msg('error.message.required','forms',null)}"
             data-pattern-mismatch="${Resource.msg('error.message.parse.phone.profile.form','forms',null)}"
             data-range-error="${Resource.msg('error.message.50orless','forms',null)}"
@@ -198,8 +195,7 @@
             data-missing-error="${Resource.msg('error.message.required','forms',null)}"
             data-range-error="${Resource.msg('error.message.50orless','forms',null)}"
             aria-describedby="form-cep-error"
-            <isprint value=${pdict.profileForm.customer.cep.attributes} encoding="off" />
-            placeholder= "${Resource.msg('example.cep','forms',null)}">
+            <isprint value=${pdict.profileForm.customer.cep.attributes} encoding="off" />>
         <div class="invalid-feedback" id="form-cep-error"></div>
     </div>
 
@@ -274,4 +270,25 @@
             ${Resource.msg('link.privacypolicy.registration', 'registration', null)}
         </a>
     </div>
+
+    <script>
+        function preencher(endereco){
+        document.getElementById('cidade').value=endereco.localidade;
+        document.getElementById('rua').value=endereco.logradouro;
+        document.getElementById('estado').value=endereco.uf;
+            }
+        async function pesquisar(){
+        const cep = document.getElementById('cep').value;
+        const url =  "https://viacep.com.br/ws/%22+cep+%22/json/";
+
+        const dados = await fetch(url);
+        const endereco = await dados.json();
+        preencher(endereco);
+        }
+        document.getElementById('cep')
+        .addEventListener('blur',pesquisar);
+    </script>
+    
 </form>
+
+

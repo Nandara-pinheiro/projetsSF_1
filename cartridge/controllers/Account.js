@@ -279,7 +279,7 @@ server.post(
                                 newCustomerProfile.custom.CEPNandara = registrationForm.cep;
                                 newCustomerProfile.custom.StateNandara = registrationForm.state;
                                 newCustomerProfile.custom.CityNandara = registrationForm.city;
-                                newCustomerProfile.custom.StateNandara = registrationForm.street;
+                                newCustomerProfile.custom.StreetNandara = registrationForm.street;
 
                             
                             }

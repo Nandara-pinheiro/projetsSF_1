@@ -26,7 +26,7 @@ function getProfile(profile) {
             firstName: profile.firstName,
             lastName: profile.lastName,
             email: profile.email,
-            password: '********'
+            password: '********',
             cpf: profileCustom.custom.CPFNandara,
             birthday: profile.birthday,
             gender: profile.gender,
