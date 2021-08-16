@@ -433,7 +433,6 @@ server.post(
         var result = {
             firstName: profileForm.customer.firstname.value,
             lastName: profileForm.customer.lastname.value,
-            cpf: profileForm.customer.cpf.value,
             phone: profileForm.customer.phone.value,
             email: profileForm.customer.email.value,
             confirmEmail: profileForm.customer.emailconfirm.value,
@@ -477,7 +476,6 @@ server.post(
                     Transaction.wrap(function () {
                         profile.setFirstName(formInfo.firstName);
                         profile.setLastName(formInfo.lastName);
-                        profile.setCpf(formInfo.cpf);
                         profile.setEmail(formInfo.email);
                         profile.setPhoneHome(formInfo.phone);
                     });
