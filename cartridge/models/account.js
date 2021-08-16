@@ -28,13 +28,13 @@ function getProfile(profile) {
             email: profile.email,
             password: '********',
             cpf: profileCustom.custom.CPFNandara,
-            // birthday: profile.birthday,
-            // gender: profile.gender,
+            birthday: profile.birthday,
+            gender: profile.gender,
             phone: Object.prototype.hasOwnProperty.call(profile, 'phone') ? profile.phone : profile.phoneHome,
-            // cep: profileCustom.custom.CEPNandara,
-            // state: profileCustom.custom.StateNandara,
-            // city: profileCustom.custom.CityNandara,
-            // street: profileCustom.custom.StreetNandara,
+            cep: profileCustom.custom.CEPNandara,
+            state: profileCustom.custom.StateNandara,
+            city: profileCustom.custom.CityNandara,
+            street: profileCustom.custom.StreetNandara,
         
         };
     } else {

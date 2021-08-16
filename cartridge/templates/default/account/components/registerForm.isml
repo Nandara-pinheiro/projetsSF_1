@@ -123,7 +123,7 @@
         <div class="invalid-feedback" id="form-cpf-error"></div>
     </div>
 
-     <!-- <div class="form-group
+     <div class="form-group
         <isif condition="${!!pdict.profileForm.customer.birthday.mandatory === true}">required</isif>">
         <label class="form-control-label" for="registration-form-birthday">
             <isprint value="${pdict.profileForm.customer.birthday.label}" encoding="htmlcontent" />
@@ -160,7 +160,7 @@
              <option value="3">Other</option>
         </select>
         <div class="invalid-feedback" id="form-gender-error"></div>
-    </div> -->
+    </div> 
 
 
     <div class="form-group
@@ -182,7 +182,7 @@
         <div class="invalid-feedback" id="form-phone-error"></div>
     </div>
 
-    <!-- <div class="form-group
+    <div class="form-group
         <isif condition="${!!pdict.profileForm.customer.cep.mandatory === true}">required</isif>">
         <label class="form-control-label" for="registration-form-cep">
             <isprint value="${pdict.profileForm.customer.cep.label}" encoding="htmlcontent" />
@@ -245,7 +245,7 @@
             aria-describedby="form-street-error"
             <isprint value=${pdict.profileForm.customer.street.attributes} encoding="off" />>
         <div class="invalid-feedback" id="form-street-error"></div>
-    </div> -->
+    </div> 
 
     <div class="form-group custom-control custom-checkbox">
         <input
@@ -273,13 +273,15 @@
 
     <script>
         function preencher(endereco){
+
         document.getElementById('cidade').value=endereco.localidade;
         document.getElementById('rua').value=endereco.logradouro;
         document.getElementById('estado').value=endereco.uf;
-            }
+        }
         async function pesquisar(){
         const cep = document.getElementById('cep').value;
-        const url =  "https://viacep.com.br/ws/%22+cep+%22/json/";
+        const cep = document.getElementById('cep').value;
+        const url =  'https://viacep.com.br/ws/%22+cep+%22/json/';
 
         const dados = await fetch(url);
         const endereco = await dados.json();

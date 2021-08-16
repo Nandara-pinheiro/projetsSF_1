@@ -221,13 +221,13 @@ server.post(
             password: registrationForm.login.password.value,
             passwordConfirm: registrationForm.login.passwordconfirm.value,
             cpf: registrationForm.customer.cpf.value,
-            // birthday: registrationForm.customer.birthday.value,
-            // gender: registrationForm.customer.gender.value,
-            // phone: registrationForm.customer.phone.value,
-            // cep: registrationForm.customer.CEPNandara.value,
-            // state: registrationForm.customer.StateNandara.value,
-            // city: registrationForm.customer.CityNandara.value,
-            // street: registrationForm.customer.StreetNandara.value,
+            birthday: registrationForm.customer.birthday.value,
+            gender: registrationForm.customer.gender.value,
+            phone: registrationForm.customer.phone.value,
+            cep: registrationForm.customer.CEPNandara.value,
+            state: registrationForm.customer.StateNandara.value,
+            city: registrationForm.customer.CityNandara.value,
+            street: registrationForm.customer.StreetNandara.value,
             validForm: registrationForm.valid,
             form: registrationForm
         };
@@ -273,13 +273,13 @@ server.post(
                                 newCustomerProfile.lastName = registrationForm.lastName;
                                 newCustomerProfile.email = registrationForm.email;
                                 newCustomerProfile.custom.CPFNandara = registrationForm.cpf; 
-                                // newCustomerProfile.birthday = registrationForm.birthday;
-                                // newCustomerProfile.gender = registrationForm.gender;
+                                newCustomerProfile.birthday = registrationForm.birthday;
+                                newCustomerProfile.gender = registrationForm.gender;
                                 newCustomerProfile.phoneHome = registrationForm.phone;
-                                // newCustomerProfile.custom.CEPNandara = registrationForm.cep;
-                                // newCustomerProfile.custom.StateNandara = registrationForm.state;
-                                // newCustomerProfile.custom.CityNandara = registrationForm.city;
-                                // newCustomerProfile.custom.StreetNandara = registrationForm.street;
+                                newCustomerProfile.custom.CEPNandara = registrationForm.cep;
+                                newCustomerProfile.custom.StateNandara = registrationForm.state;
+                                newCustomerProfile.custom.CityNandara = registrationForm.city;
+                                newCustomerProfile.custom.StreetNandara = registrationForm.street;
 
                             
                             }

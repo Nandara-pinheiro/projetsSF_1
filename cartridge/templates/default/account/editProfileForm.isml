@@ -61,7 +61,7 @@
         <div class="invalid-feedback"></div>
     </div>
 
-     <!-- <div class="form-group
+     <div class="form-group
         <isif condition="${pdict.profileForm.customer.birthday.mandatory === true}">required</isif>">
         <label class="form-control-label" for="birthday">
             <isprint value="${pdict.profileForm.birthday.label}" encoding="htmlcontent" />
@@ -79,7 +79,7 @@
         <input type="text" class="form-control" id="gender"
             <isprint value="${pdict.profileForm.customer.gender.attributes}" encoding="off" />>
         <div class="invalid-feedback"></div>
-    </div> -->
+    </div> 
 
     <div class="form-group
         <isif condition="${pdict.profileForm.customer.phone.mandatory === true}">required</isif>">
@@ -91,7 +91,7 @@
         <div class="invalid-feedback"></div>
     </div>
 
-    <!-- <div class="form-group
+    <div class="form-group
         <isif condition="${pdict.profileForm.customer.cep.mandatory === true}">required</isif>">
         <label class="form-control-label" for="cep">
             <isprint value="${pdict.profileForm.cep.label}" encoding="htmlcontent" />
@@ -129,7 +129,7 @@
         <input type="text" class="form-control" id="street"
             <isprint value="${pdict.profileForm.customer.street.attributes}" encoding="off" />>
         <div class="invalid-feedback"></div>
-    </div> -->
+    </div> 
 
     <input type="hidden" name="${pdict.csrf.tokenName}" value="${pdict.csrf.token}"/>
     <div class="row">

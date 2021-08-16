@@ -54,7 +54,7 @@
 			range-error="error.message.50orless" 
 			type="string" />
 
-		<!-- <field 
+		 <field 
 			formid="birthday" 
 			label="label.input.birthday.profile" 
 			mandatory="true" 
@@ -70,7 +70,7 @@
 			max-length="50" 
 			missing-error="error.message.required"
 			range-error="error.message.50orless" 
-			type="string" />	 -->
+			type="string" />	 
 	
 		<field 
 			formid="phone"
@@ -80,7 +80,7 @@
 			parse-error="error.message.parse.phone.profile.form"
 			type="string"/> 
 
-		<!-- <field 
+		<!-<field 
 			formid="cep" 
 			label="label.input.cep.profile" 
 			mandatory="true" 
@@ -114,7 +114,7 @@
 			max-length="50" 
 			missing-error="error.message.required"
 			range-error="error.message.50orless" 
-			type="string" /> -->
+			type="string" /> 
 
 		<field 
 			formid="addtoemaillist" 
