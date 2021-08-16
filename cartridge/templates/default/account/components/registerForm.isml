@@ -119,7 +119,9 @@
             data-missing-error="${Resource.msg('error.message.required','forms',null)}"
             data-range-error="${Resource.msg('error.message.50orless','forms',null)}"
             aria-describedby="form-cpf-error"
-            <isprint value=${pdict.profileForm.customer.cpf.attributes} encoding="off" />>
+            placeholder= "${Resource.msg('example.phone','forms',null)}">
+            <isprint value=${pdict.profileForm.customer.cpf.attributes} encoding="off" />
+            placeholder= "${Resource.msg('example.cpf','forms',null)}">
         <div class="invalid-feedback" id="form-cpf-error"></div>
     </div>
 
@@ -135,7 +137,8 @@
             data-missing-error="${Resource.msg('error.message.required','forms',null)}"
             data-range-error="${Resource.msg('error.message.50orless','forms',null)}"
             aria-describedby="form-birthday-error"
-            <isprint value=${pdict.profileForm.customer.birthday.attributes} encoding="off" />>
+            <isprint value=${pdict.profileForm.customer.birthday.attributes} encoding="off" />
+            placeholder= "${Resource.msg('example.birthday','forms',null)}">
         <div class="invalid-feedback" id="form-birthday-error"></div>
     </div>
 
@@ -195,7 +198,8 @@
             data-missing-error="${Resource.msg('error.message.required','forms',null)}"
             data-range-error="${Resource.msg('error.message.50orless','forms',null)}"
             aria-describedby="form-cep-error"
-            <isprint value=${pdict.profileForm.customer.cep.attributes} encoding="off" />>
+            <isprint value=${pdict.profileForm.customer.cep.attributes} encoding="off" />
+            placeholder= "${Resource.msg('example.cep','forms',null)}">
         <div class="invalid-feedback" id="form-cep-error"></div>
     </div>
 
