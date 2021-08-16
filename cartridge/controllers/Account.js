@@ -221,13 +221,13 @@ server.post(
             password: registrationForm.login.password.value,
             passwordConfirm: registrationForm.login.passwordconfirm.value,
             cpf: registrationForm.customer.cpf.value,
-            birthday: registrationForm.customer.birthday.value,
-            gender: registrationForm.customer.gender.value,
-            phone: registrationForm.customer.phone.value,
-            cep: registrationForm.customer.cep.value,
-            state: registrationForm.customer.state.value,
-            city: registrationForm.customer.city.value,
-            street: registrationForm.customer.street.value,
+            // birthday: registrationForm.customer.birthday.value,
+            // gender: registrationForm.customer.gender.value,
+            // phone: registrationForm.customer.phone.value,
+            // cep: registrationForm.customer.CEPNandara.value,
+            // state: registrationForm.customer.StateNandara.value,
+            // city: registrationForm.customer.CityNandara.value,
+            // street: registrationForm.customer.StreetNandara.value,
             validForm: registrationForm.valid,
             form: registrationForm
         };
@@ -273,13 +273,13 @@ server.post(
                                 newCustomerProfile.lastName = registrationForm.lastName;
                                 newCustomerProfile.email = registrationForm.email;
                                 newCustomerProfile.custom.CPFNandara = registrationForm.cpf; 
-                                newCustomerProfile.birthday = registrationForm.birthday;
-                                newCustomerProfile.gender = registrationForm.gender;
+                                // newCustomerProfile.birthday = registrationForm.birthday;
+                                // newCustomerProfile.gender = registrationForm.gender;
                                 newCustomerProfile.phoneHome = registrationForm.phone;
-                                newCustomerProfile.custom.CEPNandara = registrationForm.cep;
-                                newCustomerProfile.custom.StateNandara = registrationForm.state;
-                                newCustomerProfile.custom.CityNandara = registrationForm.city;
-                                newCustomerProfile.custom.StreetNandara = registrationForm.street;
+                                // newCustomerProfile.custom.CEPNandara = registrationForm.cep;
+                                // newCustomerProfile.custom.StateNandara = registrationForm.state;
+                                // newCustomerProfile.custom.CityNandara = registrationForm.city;
+                                // newCustomerProfile.custom.StreetNandara = registrationForm.street;
 
                             
                             }
@@ -367,7 +367,6 @@ server.get(
         profileForm.clear();
         profileForm.customer.firstname.value = accountModel.profile.firstName;
         profileForm.customer.lastname.value = accountModel.profile.lastName;
-        profileForm.customer.cpf.value = accountModel.profile.cpf;
         profileForm.customer.phone.value = accountModel.profile.phone;
         profileForm.customer.email.value = accountModel.profile.email;
         res.render('account/profile', {

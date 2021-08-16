@@ -23,19 +23,19 @@
             <dd>${pdict.account.profile.cpf}</dd>
         </dl>
         <dl>
-            <dt>${Resource.msg('label.profile.birthday','account',null)}</dt>
+            <!-- <dt>${Resource.msg('label.profile.birthday','account',null)}</dt>
             <dd>${pdict.account.profile.birthday}</dd>
         </dl>
         <dl>
             <dt>${Resource.msg('label.profile.gender','account',null)}</dt>
             <dd>${pdict.account.profile.gender}</dd>
-        </dl>
+        </dl> -->
         <dl>
             <dt>${Resource.msg('label.profile.phone','account',null)}</dt>
             <dd>${pdict.account.profile.phone}</dd>
         </dl>
         <dl>
-            <dt>${Resource.msg('label.profile.cep','account',null)}</dt>
+            <!-- <dt>${Resource.msg('label.profile.cep','account',null)}</dt>
             <dd>${pdict.account.profile.cep}</dd>
         </dl>
         <dl>
@@ -49,7 +49,7 @@
         <dl>
             <dt>${Resource.msg('label.profile.street','account',null)}</dt>
             <dd>${pdict.account.profile.street}</dd>
-        </dl>
+        </dl> -->
         
         <isif condition="${!pdict.account.isExternallyAuthenticated}">
             <dl>
