@@ -212,6 +212,11 @@ server.post(
             registrationForm.valid = false;
         }
 
+        let dateBirthday = registrationForm.customer.birthday.value; 
+        if(typeof dateBirthday === 'string'){
+            dateBirthday = new Date(dateBirthday);
+        }
+
         // setting variables for the BeforeComplete function
         var registrationFormObj = {
             firstName: registrationForm.customer.firstname.value,
@@ -221,13 +226,13 @@ server.post(
             password: registrationForm.login.password.value,
             passwordConfirm: registrationForm.login.passwordconfirm.value,
             cpf: registrationForm.customer.cpf.value,
-            birthday: registrationForm.customer.birthday.value,
+            birthday: dateBirthday
             gender: registrationForm.customer.gender.value,
             phone: registrationForm.customer.phone.value,
-            cep: registrationForm.customer.CEPNandara.value,
-            state: registrationForm.customer.StateNandara.value,
-            city: registrationForm.customer.CityNandara.value,
-            street: registrationForm.customer.StreetNandara.value,
+            cep: registrationForm.customer.cep.value,
+            state: registrationForm.customer.state.value,
+            city: registrationForm.customer.city.value,
+            street: registrationForm.customer.street.value,
             validForm: registrationForm.valid,
             form: registrationForm
         };
