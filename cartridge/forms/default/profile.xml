@@ -58,7 +58,7 @@
 			formid="birthday" 
 			label="label.input.birthday.profile" 
 			mandatory="true" 
-			max-length="10" 
+			max-length="11" 
 			missing-error="error.message.required"
 			range-error="error.message.50orless" 
 			type="string" />
@@ -66,11 +66,12 @@
 		<field 
 			formid="gender" 
 			label="label.input.gender.profile" 
-			mandatory="true" 
-			max-length="50" 
+			mandatory="true"
+			binding="gender"
 			missing-error="error.message.required"
-			range-error="error.message.50orless" 
-			type="string" />	 
+			type="integer" />
+
+
 	
 		<field 
 			formid="phone"
@@ -78,22 +79,24 @@
 			mandatory="true"
 			missing-error="error.message.required"
 			parse-error="error.message.parse.phone.profile.form"
+			regexp="^[0-9]{2}-?\s(([0-9]{5}-[0-9]{4})|[0-9]{8}|[0-9]{9})"
 			type="string"/> 
 
 		<!-<field 
 			formid="cep" 
 			label="label.input.cep.profile" 
 			mandatory="true" 
-			max-length="50" 
+			max-length="10" 
 			missing-error="error.message.required"
 			range-error="error.message.50orless" 
+			regexp="^[0-9]{5}-[0-9]{3}|[0-9]{8}"
 			type="string" />
 
 		<field 
 			formid="state" 
 			label="label.input.state.profile" 
 			mandatory="true" 
-			max-length="50" 
+			max-length="2" 
 			missing-error="error.message.required"
 			range-error="error.message.50orless" 
 			type="string" />

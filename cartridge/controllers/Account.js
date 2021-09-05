@@ -226,7 +226,7 @@ server.post(
             password: registrationForm.login.password.value,
             passwordConfirm: registrationForm.login.passwordconfirm.value,
             cpf: registrationForm.customer.cpf.value,
-            birthday: dateBirthday
+            birthday: dateBirthday,
             gender: registrationForm.customer.gender.value,
             phone: registrationForm.customer.phone.value,
             cep: registrationForm.customer.cep.value,
