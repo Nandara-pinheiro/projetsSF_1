@@ -1,0 +1,45 @@
+{
+  "name": "test",
+  "description": "Login page component",
+  "group": "commerce_assets",
+  "attribute_definition_groups": [
+    {
+      "id": "Settings",
+      "name": "Settings",
+      "attribute_definitions": [
+        {
+          "id": "name",
+          "name": "Username",
+          "type": "string",
+          "required": false
+        },
+        {
+          "id": "password",
+          "name": "Password",
+          "type": "string",
+          "required": false
+        },
+        {
+          "id": "forgotPassword",
+          "name": "Forgot password",
+          "type": "string",
+          "required": false
+        },
+        {
+          "id": "buttonLogin",
+          "name": "Login Button",
+          "type": "string",
+          "required": false
+        },
+        {
+          "id": "buttonRecord",
+          "name": "Record Button",
+          "type": "string",
+          "required": false
+        }
+        
+      ]
+    }
+  ],
+  "region_definitions": []
+}
